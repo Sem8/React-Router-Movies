@@ -1,11 +1,10 @@
 import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
 
-const MovieCard = ({ movie }) => {
-  const { title, director, metascore, stars } = movie;
-  // const { id } = match.params;
-  return (
-    // <Link to={`/movies/${movie.id}`}>    
+const MovieCard = ({ eachMovie }) => {
+  const { title, director, metascore, stars } = eachMovie;
+  
+  return (      
       <div className="movie-card">
         <h2>{title}</h2>
         <div className="movie-director">
@@ -21,8 +20,7 @@ const MovieCard = ({ movie }) => {
             {star}
           </div>
         ))}
-      </div>
-    // </Link>
+      </div>    
   );
 };
 
